@@ -28,6 +28,7 @@
 		5FDFE9E129F6952500873949 /* ChatGPTTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDFE9E029F6952500873949 /* ChatGPTTests.swift */; };
 		5FDFE9EB29F6952500873949 /* ChatGPTUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDFE9EA29F6952500873949 /* ChatGPTUITests.swift */; };
 		5FDFE9ED29F6952500873949 /* ChatGPTUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDFE9EC29F6952500873949 /* ChatGPTUITestsLaunchTests.swift */; };
+		E87724872A20DFC50014D9DE /* MyLocalKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = E87724862A20DFC50014D9DE /* MyLocalKeys.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,8 @@
 		5FDFE9E629F6952500873949 /* ChatGPTUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChatGPTUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FDFE9EA29F6952500873949 /* ChatGPTUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGPTUITests.swift; sourceTree = "<group>"; };
 		5FDFE9EC29F6952500873949 /* ChatGPTUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGPTUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E87724852A20DDC00014D9DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		E87724862A20DFC50014D9DE /* MyLocalKeys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = MyLocalKeys.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +158,7 @@
 		5FDFE9C829F6952100873949 /* ChatGPT */ = {
 			isa = PBXGroup;
 			children = (
+				E87724852A20DDC00014D9DE /* Info.plist */,
 				5F8FA61A29F7BF8100111FDE /* Network.swift */,
 				5F8FA61C29F7C11100111FDE /* ResponseModels.swift */,
 				5FDFE9C929F6952100873949 /* ChatGPTApp.swift */,
@@ -168,6 +172,7 @@
 				5F8FA62129F7CC9E00111FDE /* ChatView.swift */,
 				5F8FA62329F7CFEB00111FDE /* MessageView.swift */,
 				5F8FA62629F7D61B00111FDE /* Storage.swift */,
+				E87724862A20DFC50014D9DE /* MyLocalKeys.plist */,
 			);
 			path = ChatGPT;
 			sourceTree = "<group>";
@@ -341,6 +346,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5FDFE9D729F6952400873949 /* Preview Assets.xcassets in Resources */,
+				E87724872A20DFC50014D9DE /* MyLocalKeys.plist in Resources */,
 				5FDFE9D329F6952400873949 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -611,6 +617,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ChatGPT/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -651,6 +658,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ChatGPT/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;

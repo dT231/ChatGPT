@@ -7,17 +7,31 @@
 
 import Foundation
 
-
+fileprivate struct MyLocalKeys: Decodable {
+    let chatGPTKey: String
+}
 
 struct Network {
+    static func getChatGPTKey() -> String? {
+        guard let url = Bundle.main.url(forResource: "MyLocalKeys", withExtension:"plist") else { return nil }
+            do {
+                let data = try Data(contentsOf: url)
+                let result = try PropertyListDecoder().decode(MyLocalKeys.self, from: data)
+                return result.chatGPTKey
+            } catch { print(error) }
+        
+        return nil
+    }
     
     static func fetchChat(chats: [Chat]) async throws -> ChatResponse? {
-        var bearerToken: String = "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"
+        var bearerToken: String = getChatGPTKey() ?? ""
         
         if let key = Bundle.main.infoDictionary?["API_KEY"] as? String {
             bearerToken = key
             print(key)
         }
+        
+        print(bearerToken)
         
         guard let url = URL(string: "https://api.openai.com/v1/chat/completions") else { fatalError("Missing URL") }
         

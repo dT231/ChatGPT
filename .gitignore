@@ -1,0 +1,42 @@
+# MacOS specific
+.DS_Store
+
+# Git helpers and hooks
+.githooks
+
+# User settings
+xcuserdata/
+ChatGPT/MyLocalKeys.plist
+
+# Builds derived data
+/build
+/builds
+/.build
+/etc
+/Carthage
+/fastlane
+
+# App packaging
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+## Generated project
+*.xcodeproj
+
+## Frameworks levels utility file
+.frameworks_levels
+
+## Generated files
+*.generated.swift
+*.generated.plist
+*.generated.txt
+/Project/GenProj/Configs/Generated
+
+# Temporary file for generating analytics events
+# Unfortunately the GYB architecture does not allow to use command line arguments
+tmp.events.json
+
+# ruby lagacy
+Gemfile
+Gemfile.lock
